@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/syed/Amaan/amaan_codes/compiler-cost-model/build",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o llvm/passes/CMakeFiles/FeatureExtractor.dir/FeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compiler-cost-model/llvm/passes/FeatureExtractor.cpp",
+  "file": "/home/syed/Amaan/amaan_codes/compiler-cost-model/llvm/passes/FeatureExtractor.cpp",
+  "output": "/home/syed/Amaan/amaan_codes/compiler-cost-model/build/llvm/passes/CMakeFiles/FeatureExtractor.dir/FeatureExtractor.cpp.o"
+}
+]
