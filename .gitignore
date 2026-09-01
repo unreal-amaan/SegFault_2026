@@ -1,0 +1,52 @@
+
+# External benchmark suite used for data collection
+benchmarks/polybench/
+
+# Build artifacts
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+Makefile
+*.ninja
+*.cmake
+
+# Object and binary files
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.bc
+
+# Temporary and editor files
+*~
+*.swp
+*.swo
+*.DS_Store
+*.log
+*.tmp
+*.tmp.*
+
+# Backup files
+*.bak
+*.orig
+
+# Debug and profiling files
+*.dSYM/
+*.prof
+*.gcda
+*.gcno
+
+# Misc
+*.pyc
+.vscode/
+.idea/
+.cache/

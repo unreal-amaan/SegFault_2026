@@ -1,4 +1,4 @@
-add_llvm_pass_plugin(FeatureExtractor
-    FeatureExtractor.cpp
+add_llvm_pass_plugin(LoopUnrollFeatureExtractor
+    LoopUnrollFeatureExtractor.cpp
 )
 

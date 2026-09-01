@@ -1,4 +1,4 @@
-# Install script for directory: /home/syed/Amaan/amaan_codes/compiler-cost-model
+# Install script for directory: /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,13 +44,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/syed/Amaan/amaan_codes/compiler-cost-model/build/llvm/passes/cmake_install.cmake")
+  include("/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/syed/Amaan/amaan_codes/compiler-cost-model/build/install_local_manifest.txt"
+  file(WRITE "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -66,6 +66,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/syed/Amaan/amaan_codes/compiler-cost-model/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

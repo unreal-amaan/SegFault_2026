@@ -1,4 +1,4 @@
-# Install script for directory: /home/syed/Amaan/amaan_codes/compiler-cost-model/llvm/passes
+# Install script for directory: /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,22 +42,22 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "FeatureExtractor" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopUnrollFeatureExtractor" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so"
          RPATH "\$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compiler-cost-model/build/llvm/passes/FeatureExtractor.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopUnrollFeatureExtractor.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so"
          OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
          NEW_RPATH "\$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/FeatureExtractor.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so")
     endif()
   endif()
 endif()
@@ -65,6 +65,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/syed/Amaan/amaan_codes/compiler-cost-model/build/llvm/passes/install_local_manifest.txt"
+  file(WRITE "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

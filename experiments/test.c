@@ -1,14 +1,14 @@
-#include <stdio.h>
-
-int add(int a, int b) { return a + b; }
-
-int multiply(int a, int b) { return a * b; }
-
 int main() {
-  int x = add(2, 3);
-  int y = multiply(x, 10);
+  volatile int result = 0;
 
-  printf("%d\n", y);
+  for (int i = 0; i < 5; i++) {
+    result += i;
 
-  return 0;
+    for (int j = 1; j < 6; ++j) {
+      result += i * j;
+      result += j;
+    }
+  }
+
+  return result;
 }

@@ -1,8 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/syed/Amaan/amaan_codes/compiler-cost-model/build/cmake_install.cmake",
-		"/home/syed/Amaan/amaan_codes/compiler-cost-model/build/llvm/passes/cmake_install.cmake"
+		"/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/cmake_install.cmake",
+		"/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
