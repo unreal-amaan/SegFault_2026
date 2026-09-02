@@ -62,6 +62,26 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopUnrollFeatureExtractor" OR NOT CMAKE_IN
   endif()
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopUnrollDatasetGenerator" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so"
+         RPATH "\$ORIGIN/../lib")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopUnrollDatasetGenerator.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so"
+         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
+         NEW_RPATH "\$ORIGIN/../lib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so")
+    endif()
+  endif()
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)

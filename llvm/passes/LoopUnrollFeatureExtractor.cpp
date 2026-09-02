@@ -49,14 +49,18 @@ struct LoopUnrollFeatures {
   double controlOverheadRatio;
   double arithmeticIntensity;
 };
+unsigned LoopID = 0;
 
 class LoopUnrollFeatureExtractor
     : public PassInfoMixin<LoopUnrollFeatureExtractor> {
 private:
-  void extractLoopFeatures(Loop *L, unsigned &LoopID, ScalarEvolution &SE) {
+  void extractLoopFeatures(Loop *L, ScalarEvolution &SE) {
     LoopUnrollFeatures Features{};
 
-    Features.loopID = LoopID++;
+    unsigned CurrentLoopID = LoopID++;
+    Features.loopID = CurrentLoopID;
+    attachLoopID(L, CurrentLoopID);
+
     Features.loopDepth = L->getLoopDepth();
     Features.isInnermost = L->isInnermost();
     Features.hasParentLoop = L->getParentLoop() != nullptr;
@@ -141,12 +145,65 @@ private:
     Features.numConditionalBranches = numConditionalBranches;
     Features.numCalls = numCalls;
 
+    unsigned tripCounts = SE.getSmallConstantTripCount(L);
+
+    Features.tripCountKnown = tripCounts != 0;
+    Features.tripCount = tripCounts;
+
+    unsigned maxTripCounts = SE.getSmallConstantMaxTripCount(L);
+
+    Features.maxTripCountKnown = maxTripCounts != 0;
+    Features.maxTripCount = maxTripCounts;
+
+    unsigned memoryOps = numLoads + numStores;
+
+    unsigned arithmeticOps = numIntegerOps + numFloatOps;
+
+    unsigned controlOps = numBranches + numTerminatorInstructions;
+
+    Features.memoryOpRatio =
+        numInstructions > 0 ? static_cast<double>(memoryOps) / numInstructions
+                            : 0.0;
+    Features.controlOverheadRatio =
+        numInstructions > 0 ? static_cast<double>(numBranches) / numInstructions
+                            : 0.0;
+    Features.arithmeticIntensity =
+        memoryOps > 0 ? static_cast<double>(arithmeticOps) / memoryOps
+                      : static_cast<double>(arithmeticOps);
+
     printInfo(Features);
 
     // Recursively process nested loops
     for (Loop *SubLoop : *L) {
-      extractLoopFeatures(SubLoop, LoopID, SE);
+      extractLoopFeatures(SubLoop, SE);
     }
+  }
+
+  void attachLoopID(Loop *L, unsigned LoopNumber) {
+    LLVMContext &Ctx = L->getHeader()->getContext();
+
+    SmallVector<Metadata *, 8> Operands;
+
+    Operands.push_back(nullptr);
+
+    if (MDNode *ExistingLoopID = L->getLoopID()) {
+      for (unsigned I = 1; I < ExistingLoopID->getNumOperands(); ++I) {
+        Operands.push_back(ExistingLoopID->getOperand(I));
+      }
+    }
+
+    Metadata *LoopIDOperands[] = {
+        MDString::get(Ctx, "compiler_cost_model.loop_id"),
+        ConstantAsMetadata::get(
+            ConstantInt::get(Type::getInt32Ty(Ctx), LoopNumber))};
+
+    Operands.push_back(MDNode::get(Ctx, LoopIDOperands));
+
+    MDNode *NewLoopID = MDNode::getDistinct(Ctx, Operands);
+
+    NewLoopID->replaceOperandWith(0, NewLoopID);
+
+    L->setLoopID(NewLoopID);
   }
 
   void printInfo(LoopUnrollFeatures &Features) {
@@ -170,6 +227,16 @@ private:
     errs() << "  num_conditional_branches: " << Features.numConditionalBranches
            << "\n";
     errs() << "  num_calls: " << Features.numCalls << "\n";
+    errs() << "  trip_count_known: " << Features.tripCountKnown << "\n";
+    errs() << "  trip_count: " << Features.tripCount << "\n";
+    errs() << "  max_trip_count_known: " << Features.maxTripCountKnown << "\n";
+    errs() << "  max_trip_count: " << Features.maxTripCount << "\n";
+  
+    errs() << "  memory_op_ratio: " << Features.memoryOpRatio << "\n";
+    errs() << "  control_overhead_ratio: " << Features.controlOverheadRatio
+           << "\n";
+    errs() << "  arithmetic_intensity: " << Features.arithmeticIntensity
+           << "\n";
   }
 
 public:
@@ -186,13 +253,13 @@ public:
 
     errs() << "\nFunction:" << F.getName() << "\n";
 
-    unsigned LoopID = 0;
+    // unsigned LoopID = 0;
 
     for (Loop *L : LI) {
-      extractLoopFeatures(L, LoopID, SE);
+      extractLoopFeatures(L,  SE);
     }
 
-    return PreservedAnalyses::all();
+    return PreservedAnalyses::none();
   }
 };
 

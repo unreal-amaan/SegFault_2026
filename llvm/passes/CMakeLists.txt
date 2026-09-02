@@ -1,4 +1,9 @@
 add_llvm_pass_plugin(LoopUnrollFeatureExtractor
-    LoopUnrollFeatureExtractor.cpp
+LoopUnrollFeatureExtractor.cpp
+PARTIAL_SOURCES_INTENDED
 )
 
+add_llvm_pass_plugin(LoopUnrollDatasetGenerator
+LoopUnrollDatasetGenerator.cpp
+PARTIAL_SOURCES_INTENDED
+)

@@ -281,6 +281,9 @@ CompilerCostModel_SOURCE_DIR:STATIC=/home/syed/Amaan/amaan_codes/compilers/compi
 //No help, variable specified on the command line.
 LLVM_DIR:UNINITIALIZED=/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm
 
+//Statically link LoopUnrollDatasetGenerator into tools (if available)
+LLVM_LOOPUNROLLDATASETGENERATOR_LINK_INTO_TOOLS:BOOL=OFF
+
 //Statically link LoopUnrollFeatureExtractor into tools (if available)
 LLVM_LOOPUNROLLFEATUREEXTRACTOR_LINK_INTO_TOOLS:BOOL=OFF
 

@@ -1,4 +1,4 @@
-; ModuleID = './experiments/test.c'
+; ModuleID = './experiments/test.ll'
 source_filename = "./experiments/test.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
@@ -47,7 +47,7 @@ for.inc4:                                         ; preds = %for.end
   %3 = load i32, ptr %i, align 4
   %inc5 = add nsw i32 %3, 1
   store i32 %inc5, ptr %i, align 4
-  br label %for.cond, !llvm.loop !8
+  br label %for.cond, !llvm.loop !9
 
 for.end6:                                         ; preds = %for.cond
   %4 = load i32, ptr %retval, align 4
@@ -65,6 +65,8 @@ attributes #0 = { noinline nounwind uwtable "frame-pointer"="all" "min-legal-vec
 !3 = !{i32 7, !"uwtable", i32 2}
 !4 = !{i32 7, !"frame-pointer", i32 2}
 !5 = !{!"clang version 22.1.6 (https://github.com/llvm/llvm-project.git fc4aad7b5db3fff421df9a9637605b9ca5667881)"}
-!6 = distinct !{!6, !7}
+!6 = distinct !{!6, !7, !8}
 !7 = !{!"llvm.loop.mustprogress"}
-!8 = distinct !{!8, !7}
+!8 = !{!"compiler_cost_model.loop_id", i32 1}
+!9 = distinct !{!9, !7, !10}
+!10 = !{!"compiler_cost_model.loop_id", i32 0}
