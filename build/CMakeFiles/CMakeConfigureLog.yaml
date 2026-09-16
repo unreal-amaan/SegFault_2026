@@ -1031,8 +1031,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o"
-      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o"
+      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS"
+      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -1042,13 +1042,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o'
+        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a4f23/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_a4f23.dir/build.make CMakeFiles/cmTC_a4f23.dir/build
-        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o'
-        Building C object CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aa237/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aa237.dir/build.make CMakeFiles/cmTC_aa237.dir/build
+        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS'
+        Building C object CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1058,8 +1058,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_a4f23.dir/'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a4f23.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/ccWSNlun.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_aa237.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_aa237.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/cc7S0l0J.s
         GNU C23 (GCC) version 16.1.1 20260515 (Red Hat 16.1.1-2) (x86_64-redhat-linux)
         	compiled by GNU C version 16.1.1 20260515 (Red Hat 16.1.1-2), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.24-GMP
         
@@ -1073,14 +1073,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 02fd4c3bc0302122b50e730803efc7d8
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_a4f23.dir/'
-         as -v --64 -o CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o /tmp/ccWSNlun.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_aa237.dir/'
+         as -v --64 -o CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o /tmp/cc7S0l0J.s
         GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_a4f23
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4f23.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_aa237
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa237.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper
@@ -1093,14 +1093,14 @@ events:
         gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a4f23' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_a4f23.'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccauciGK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a4f23 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aa237' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_aa237.'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMPUaJl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_aa237 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         collect2 version 16.1.1 20260515 (Red Hat 16.1.1-2)
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccauciGK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a4f23 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMPUaJl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_aa237 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         GNU ld version 2.46.1-1.fc44
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a4f23' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_a4f23.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -o cmTC_a4f23
-        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aa237' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_aa237.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -o cmTC_aa237
+        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS'
         
       exitCode: 0
   -
@@ -1133,13 +1133,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o']
+        ignore line: [Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a4f23/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a4f23.dir/build.make CMakeFiles/cmTC_a4f23.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-TKzq4o']
-        ignore line: [Building C object CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aa237/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_aa237.dir/build.make CMakeFiles/cmTC_aa237.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-FMBCxS']
+        ignore line: [Building C object CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1149,8 +1149,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_a4f23.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a4f23.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/ccWSNlun.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_aa237.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_aa237.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/cc7S0l0J.s]
         ignore line: [GNU C23 (GCC) version 16.1.1 20260515 (Red Hat 16.1.1-2) (x86_64-redhat-linux)]
         ignore line: [	compiled by GNU C version 16.1.1 20260515 (Red Hat 16.1.1-2)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -1164,14 +1164,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 02fd4c3bc0302122b50e730803efc7d8]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_a4f23.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o /tmp/ccWSNlun.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_aa237.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o /tmp/cc7S0l0J.s]
         ignore line: [GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_a4f23]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4f23.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_aa237]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa237.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper]
@@ -1184,13 +1184,13 @@ events:
         ignore line: [gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a4f23' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_a4f23.']
-        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccauciGK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a4f23 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aa237' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_aa237.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMPUaJl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_aa237 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
           arg [/usr/libexec/gcc/x86_64-redhat-linux/16/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccauciGK.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccMPUaJl.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1206,7 +1206,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_a4f23] ==> ignore
+          arg [cmTC_aa237] ==> ignore
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o]
@@ -1218,7 +1218,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
           arg [-latomic_asneeded] ==> lib [atomic_asneeded]
@@ -1228,7 +1228,7 @@ events:
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
         ignore line: [collect2 version 16.1.1 20260515 (Red Hat 16.1.1-2)]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccauciGK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a4f23 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_a4f23.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMPUaJl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_aa237 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_aa237.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
         collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
@@ -1265,8 +1265,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU"
-      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU"
+      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny"
+      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1277,13 +1277,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU'
+        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0186/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_f0186.dir/build.make CMakeFiles/cmTC_f0186.dir/build
-        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU'
-        Building CXX object CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0e3d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f0e3d.dir/build.make CMakeFiles/cmTC_f0e3d.dir/build
+        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny'
+        Building CXX object CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1293,8 +1293,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0186.dir/'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f0186.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/cc7wjyl0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0e3d.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f0e3d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/ccFIcjFD.s
         GNU C++20 (GCC) version 16.1.1 20260515 (Red Hat 16.1.1-2) (x86_64-redhat-linux)
         	compiled by GNU C version 16.1.1 20260515 (Red Hat 16.1.1-2), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.24-GMP
         
@@ -1311,14 +1311,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: f7f3cb99b253d13f382d2bbd7f6c1fbf
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0186.dir/'
-         as -v --64 -o CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc7wjyl0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0e3d.dir/'
+         as -v --64 -o CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccFIcjFD.s
         GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_f0186
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0186.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_f0e3d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0e3d.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper
@@ -1331,14 +1331,14 @@ events:
         gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0186' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_f0186.'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSJ1PrP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0186 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0e3d' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_f0e3d.'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxuTllM.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0e3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         collect2 version 16.1.1 20260515 (Red Hat 16.1.1-2)
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSJ1PrP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0186 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxuTllM.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0e3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         GNU ld version 2.46.1-1.fc44
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0186' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_f0186.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f0186
-        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0e3d' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_f0e3d.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f0e3d
+        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny'
         
       exitCode: 0
   -
@@ -1377,13 +1377,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU']
+        ignore line: [Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0186/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f0186.dir/build.make CMakeFiles/cmTC_f0186.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-a1SvQU']
-        ignore line: [Building CXX object CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0e3d/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_f0e3d.dir/build.make CMakeFiles/cmTC_f0e3d.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-IVzDny']
+        ignore line: [Building CXX object CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1393,8 +1393,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0186.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f0186.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/cc7wjyl0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0e3d.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f0e3d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/ccFIcjFD.s]
         ignore line: [GNU C++20 (GCC) version 16.1.1 20260515 (Red Hat 16.1.1-2) (x86_64-redhat-linux)]
         ignore line: [	compiled by GNU C version 16.1.1 20260515 (Red Hat 16.1.1-2)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -1411,14 +1411,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: f7f3cb99b253d13f382d2bbd7f6c1fbf]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0186.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc7wjyl0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0e3d.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccFIcjFD.s]
         ignore line: [GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_f0186]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0186.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_f0e3d]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0e3d.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper]
@@ -1431,13 +1431,13 @@ events:
         ignore line: [gcc version 16.1.1 20260515 (Red Hat 16.1.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0186' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_f0186.']
-        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSJ1PrP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0186 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0e3d' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_f0e3d.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxuTllM.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0e3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
           arg [/usr/libexec/gcc/x86_64-redhat-linux/16/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccSJ1PrP.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccxuTllM.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1453,7 +1453,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_f0186] ==> ignore
+          arg [cmTC_f0e3d] ==> ignore
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o]
@@ -1465,7 +1465,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1477,7 +1477,7 @@ events:
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
         ignore line: [collect2 version 16.1.1 20260515 (Red Hat 16.1.1-2)]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccSJ1PrP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0186 /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0186.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxuTllM.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0e3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_f0e3d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
         collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
@@ -1509,8 +1509,8 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/FindPkgConfig.cmake:517 (find_program)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/FindLibEdit.cmake:16 (find_package)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:180 (find_package)"
+      - "/usr/lib64/cmake/llvm/FindFFI.cmake:26 (find_package)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:289 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "program"
     variable: "PKG_CONFIG_EXECUTABLE"
@@ -1589,12 +1589,274 @@ events:
   -
     kind: "find-v1"
     backtrace:
+      - "/usr/lib64/cmake/llvm/FindFFI.cmake:29 (find_path)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:289 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "path"
+    variable: "FFI_INCLUDE_DIRS"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ffi.h"
+    candidate_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/ffi.h"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ffi.h"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/ffi.h"
+      - "/home/syed/.local/share/pnpm/bin/ffi.h"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/ffi.h"
+      - "/usr/local/bin/ffi.h"
+      - "/usr/bin/ffi.h"
+      - "/bin/ffi.h"
+      - "/usr/local/include/ffi.h"
+      - "/usr/local/ffi.h"
+      - "/usr/include/ffi.h"
+      - "/usr/ffi.h"
+      - "/include/ffi.h"
+      - "/usr/X11R6/include/ffi.h"
+      - "/usr/X11R6/ffi.h"
+      - "/usr/pkg/include/ffi.h"
+      - "/usr/pkg/ffi.h"
+      - "/opt/include/ffi.h"
+      - "/opt/ffi.h"
+      - "/usr/include/X11/ffi.h"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/lib64/cmake/llvm/FindFFI.cmake:41 (find_library)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:289 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "library"
+    variable: "FFI_LIBRARIES"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ffi"
+    candidate_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+    searched_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/lib64/cmake/llvm/FindFFI.cmake:42 (find_library)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:289 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "library"
+    variable: "FFI_STATIC_LIBRARIES"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "libffi.a"
+    candidate_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+    searched_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib64/"
+      - "/lib/"
+      - "/lib/"
+      - "/opt/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+      - "/usr/lib64/X11/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
       - "/usr/share/cmake/Modules/FindPkgConfig.cmake:761 (find_library)"
       - "/usr/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
       - "/usr/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
       - "/usr/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/FindLibEdit.cmake:17 (pkg_check_modules)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:180 (find_package)"
+      - "/usr/lib64/cmake/llvm/FindLibEdit.cmake:17 (pkg_check_modules)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:296 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "library"
     variable: "pkgcfg_lib_PC_LIBEDIT_edit"
@@ -1637,8 +1899,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/FindLibEdit.cmake:19 (find_path)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:180 (find_package)"
+      - "/usr/lib64/cmake/llvm/FindLibEdit.cmake:19 (find_path)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:296 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "path"
     variable: "LibEdit_INCLUDE_DIRS"
@@ -1702,8 +1964,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/FindLibEdit.cmake:20 (find_library)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:180 (find_package)"
+      - "/usr/lib64/cmake/llvm/FindLibEdit.cmake:20 (find_library)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:296 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "library"
     variable: "LibEdit_LIBRARIES"
@@ -1765,42 +2027,42 @@ events:
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CheckIncludeFile.cmake:174 (try_compile)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/FindLibEdit.cmake:28 (check_include_file)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:180 (find_package)"
+      - "/usr/lib64/cmake/llvm/FindLibEdit.cmake:28 (check_include_file)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:296 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     checks:
       - "Looking for histedit.h"
     directories:
-      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-kRxdCl"
-      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-kRxdCl"
+      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-WR5VZM"
+      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-WR5VZM"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm"
+      CMAKE_MODULE_PATH: "/usr/lib64/cmake/llvm"
     buildResult:
       variable: "HAVE_HISTEDIT_H"
       cached: true
       stdout: |
-        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-kRxdCl'
+        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-WR5VZM'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_660cd/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_660cd.dir/build.make CMakeFiles/cmTC_660cd.dir/build
-        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-kRxdCl'
-        Building C object CMakeFiles/cmTC_660cd.dir/CheckIncludeFile.c.o
-        /usr/bin/cc    -o CMakeFiles/cmTC_660cd.dir/CheckIncludeFile.c.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-kRxdCl/CheckIncludeFile.c
-        Linking C executable cmTC_660cd
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_660cd.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_660cd.dir/CheckIncludeFile.c.o -o cmTC_660cd  /usr/lib64/libedit.so
-        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-kRxdCl'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8d890/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8d890.dir/build.make CMakeFiles/cmTC_8d890.dir/build
+        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-WR5VZM'
+        Building C object CMakeFiles/cmTC_8d890.dir/CheckIncludeFile.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_8d890.dir/CheckIncludeFile.c.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-WR5VZM/CheckIncludeFile.c
+        Linking C executable cmTC_8d890
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d890.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_8d890.dir/CheckIncludeFile.c.o -o cmTC_8d890  /usr/lib64/libedit.so
+        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-WR5VZM'
         
       exitCode: 0
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/FindZLIB.cmake:165 (find_path)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:190 (find_package)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:306 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "path"
     variable: "ZLIB_INCLUDE_DIR"
@@ -1907,7 +2169,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/FindZLIB.cmake:195 (find_library)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:190 (find_package)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:306 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "library"
     variable: "ZLIB_LIBRARY_RELEASE"
@@ -2084,7 +2346,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/FindZLIB.cmake:196 (find_library)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:190 (find_package)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:306 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "library"
     variable: "ZLIB_LIBRARY_DEBUG"
@@ -2355,8 +2617,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/Findzstd.cmake:19 (find_path)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:195 (find_package)"
+      - "/usr/lib64/cmake/llvm/Findzstd.cmake:19 (find_path)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:311 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "path"
     variable: "zstd_INCLUDE_DIR"
@@ -2429,8 +2691,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/Findzstd.cmake:20 (find_library)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:195 (find_package)"
+      - "/usr/lib64/cmake/llvm/Findzstd.cmake:20 (find_library)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:311 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "library"
     variable: "zstd_LIBRARY"
@@ -2503,8 +2765,8 @@ events:
   -
     kind: "find-v1"
     backtrace:
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/Findzstd.cmake:21 (find_library)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/LLVMConfig.cmake:195 (find_package)"
+      - "/usr/lib64/cmake/llvm/Findzstd.cmake:21 (find_library)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:311 (find_package)"
       - "CMakeLists.txt:10 (find_package)"
     mode: "library"
     variable: "zstd_STATIC_LIBRARY"
@@ -2618,42 +2880,694 @@ events:
       CMAKE_SYSTEM_LIBRARY_PATH:
         - "/usr/lib/X11"
   -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindLibXml2.cmake:117 (find_path)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:316 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "path"
+    variable: "LIBXML2_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "libxml/xpath.h"
+    candidate_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/libxml2/"
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/libxml2/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/libxml2/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/libxml2/"
+      - "/usr/local/bin/"
+      - "/usr/bin/libxml2/"
+      - "/usr/bin/"
+      - "/bin/libxml2/"
+      - "/bin/"
+      - "/usr/local/include/libxml2/"
+      - "/usr/local/include/"
+      - "/usr/local/libxml2/"
+      - "/usr/local/"
+      - "/usr/include/libxml2/"
+      - "/usr/include/"
+      - "/usr/libxml2/"
+      - "/usr/"
+      - "/include/libxml2/"
+      - "/include/"
+      - "/usr/X11R6/include/libxml2/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/libxml2/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/libxml2/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/libxml2/"
+      - "/usr/pkg/"
+      - "/opt/include/libxml2/"
+      - "/opt/include/"
+      - "/opt/libxml2/"
+      - "/opt/"
+      - "/usr/include/X11/libxml2/"
+      - "/usr/include/X11/"
+    searched_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/libxml2/libxml/xpath.h"
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/libxml/xpath.h"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml2/libxml/xpath.h"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/libxml/xpath.h"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml2/libxml/xpath.h"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/libxml/xpath.h"
+      - "/home/syed/.local/share/pnpm/bin/libxml2/libxml/xpath.h"
+      - "/home/syed/.local/share/pnpm/bin/libxml/xpath.h"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/libxml2/libxml/xpath.h"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/libxml/xpath.h"
+      - "/usr/local/bin/libxml2/libxml/xpath.h"
+      - "/usr/local/bin/libxml/xpath.h"
+      - "/usr/bin/libxml2/libxml/xpath.h"
+      - "/usr/bin/libxml/xpath.h"
+      - "/bin/libxml2/libxml/xpath.h"
+      - "/bin/libxml/xpath.h"
+      - "/usr/local/include/libxml2/libxml/xpath.h"
+      - "/usr/local/include/libxml/xpath.h"
+      - "/usr/local/libxml2/libxml/xpath.h"
+      - "/usr/local/libxml/xpath.h"
+      - "/usr/include/libxml2/libxml/xpath.h"
+      - "/usr/include/libxml/xpath.h"
+      - "/usr/libxml2/libxml/xpath.h"
+      - "/usr/libxml/xpath.h"
+      - "/include/libxml2/libxml/xpath.h"
+      - "/include/libxml/xpath.h"
+      - "/usr/X11R6/include/libxml2/libxml/xpath.h"
+      - "/usr/X11R6/include/libxml/xpath.h"
+      - "/usr/X11R6/libxml2/libxml/xpath.h"
+      - "/usr/X11R6/libxml/xpath.h"
+      - "/usr/pkg/include/libxml2/libxml/xpath.h"
+      - "/usr/pkg/include/libxml/xpath.h"
+      - "/usr/pkg/libxml2/libxml/xpath.h"
+      - "/usr/pkg/libxml/xpath.h"
+      - "/opt/include/libxml2/libxml/xpath.h"
+      - "/opt/include/libxml/xpath.h"
+      - "/opt/libxml2/libxml/xpath.h"
+      - "/opt/libxml/xpath.h"
+      - "/usr/include/X11/libxml2/libxml/xpath.h"
+      - "/usr/include/X11/libxml/xpath.h"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindLibXml2.cmake:141 (find_library)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:316 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "library"
+    variable: "LIBXML2_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "xml2"
+      - "libxml2"
+      - "libxml2_a"
+    candidate_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+    searched_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/lib64/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib64/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/lib64/"
+      - "/lib/"
+      - "/opt/"
+      - "/usr/lib64/X11/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindLibXml2.cmake:152 (find_program)"
+      - "/usr/lib64/cmake/llvm/LLVMConfig.cmake:316 (find_package)"
+      - "CMakeLists.txt:10 (find_package)"
+    mode: "program"
+    variable: "LIBXML2_XMLLINT_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "xmllint"
+    candidate_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/home/syed/.local/share/pnpm/bin/"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin/xmllint"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/xmllint"
+      - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/xmllint"
+      - "/home/syed/.local/share/pnpm/bin/xmllint"
+      - "/home/syed/.nvm/versions/node/v24.19.0/bin/xmllint"
+      - "/usr/local/bin/xmllint"
+    found: "/usr/bin/xmllint"
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:10 (find_package)"
+    name: "LLVM"
+    configs:
+      -
+        filename: "LLVM.cps"
+        kind: "cps"
+      -
+        filename: "llvm.cps"
+        kind: "cps"
+      -
+        filename: "LLVMConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "llvm-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "LLVM"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/syed/Amaan/codes/llvm/build/lib/cmake/llvm/LLVM.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/codes/llvm/build/lib/cmake/llvm/llvm.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/codes/llvm/build/lib/cmake/llvm/LLVMConfig.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/codes/llvm/build/lib/cmake/llvm/llvm-config.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib64/cmake/llvm/LLVMConfig.cmake"
+      mode: "config"
+      version: "22.1.8"
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/usr/share/cmake/Modules/Internal/CheckLinkerFlag.cmake:34 (cmake_check_source_compiles)"
       - "/usr/share/cmake/Modules/CheckLinkerFlag.cmake:153 (cmake_check_linker_flag)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/AddLLVM.cmake:337 (check_linker_flag)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/AddLLVM.cmake:680 (add_link_opts)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/AddLLVM.cmake:921 (llvm_add_library)"
-      - "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm/AddLLVM.cmake:1204 (add_llvm_library)"
+      - "/usr/lib64/cmake/llvm/AddLLVM.cmake:337 (check_linker_flag)"
+      - "/usr/lib64/cmake/llvm/AddLLVM.cmake:680 (add_link_opts)"
+      - "/usr/lib64/cmake/llvm/AddLLVM.cmake:921 (llvm_add_library)"
+      - "/usr/lib64/cmake/llvm/AddLLVM.cmake:1204 (add_llvm_library)"
       - "llvm/passes/CMakeLists.txt:1 (add_llvm_pass_plugin)"
     checks:
       - "Performing Test LLVM_LINKER_SUPPORTS_B_SYMBOLIC_FUNCTIONS"
     directories:
-      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-EmUZaX"
-      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-EmUZaX"
+      source: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-65ld0y"
+      binary: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-65ld0y"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/home/syed/Amaan/amaan_codes/compilers/llvm/build/lib/cmake/llvm"
+      CMAKE_MODULE_PATH: "/usr/lib64/cmake/llvm"
     buildResult:
       variable: "LLVM_LINKER_SUPPORTS_B_SYMBOLIC_FUNCTIONS"
       cached: true
       stdout: |
-        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-EmUZaX'
+        Change Dir: '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-65ld0y'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6e8e6/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_6e8e6.dir/build.make CMakeFiles/cmTC_6e8e6.dir/build
-        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-EmUZaX'
-        Building CXX object CMakeFiles/cmTC_6e8e6.dir/src.cxx.o
-        /usr/bin/c++ -DLLVM_LINKER_SUPPORTS_B_SYMBOLIC_FUNCTIONS  -std=gnu++20 -o CMakeFiles/cmTC_6e8e6.dir/src.cxx.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-EmUZaX/src.cxx
-        Linking CXX executable cmTC_6e8e6
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e8e6.dir/link.txt --verbose=1
-        /usr/bin/c++ -Wl,-Bsymbolic-functions CMakeFiles/cmTC_6e8e6.dir/src.cxx.o -o cmTC_6e8e6
-        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-EmUZaX'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c4f6d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c4f6d.dir/build.make CMakeFiles/cmTC_c4f6d.dir/build
+        gmake[1]: Entering directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-65ld0y'
+        Building CXX object CMakeFiles/cmTC_c4f6d.dir/src.cxx.o
+        /usr/bin/c++ -DLLVM_LINKER_SUPPORTS_B_SYMBOLIC_FUNCTIONS  -std=gnu++20 -o CMakeFiles/cmTC_c4f6d.dir/src.cxx.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-65ld0y/src.cxx
+        Linking CXX executable cmTC_c4f6d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4f6d.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-Bsymbolic-functions CMakeFiles/cmTC_c4f6d.dir/src.cxx.o -o cmTC_c4f6d
+        gmake[1]: Leaving directory '/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/CMakeScratch/TryCompile-65ld0y'
         
       exitCode: 0
 ...
