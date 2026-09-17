@@ -296,11 +296,20 @@ LIBXML2_LIBRARY:FILEPATH=LIBXML2_LIBRARY-NOTFOUND
 //Path to a program.
 LIBXML2_XMLLINT_EXECUTABLE:FILEPATH=/usr/bin/xmllint
 
+//Statically link CompilerCostModel into tools (if available)
+LLVM_COMPILERCOSTMODEL_LINK_INTO_TOOLS:BOOL=OFF
+
 //No help, variable specified on the command line.
 LLVM_DIR:UNINITIALIZED=/home/syed/Amaan/amaan_codes/llvm/build/lib/cmake/llvm
 
+//Statically link LoopFusionDatasetGenerator into tools (if available)
+LLVM_LOOPFUSIONDATASETGENERATOR_LINK_INTO_TOOLS:BOOL=OFF
+
 //Statically link LoopFusionFeatureExtractor into tools (if available)
 LLVM_LOOPFUSIONFEATUREEXTRACTOR_LINK_INTO_TOOLS:BOOL=OFF
+
+//Statically link LoopTilingFeatureExtractor into tools (if available)
+LLVM_LOOPTILINGFEATUREEXTRACTOR_LINK_INTO_TOOLS:BOOL=OFF
 
 //Statically link LoopUnrollDatasetGenerator into tools (if available)
 LLVM_LOOPUNROLLDATASETGENERATOR_LINK_INTO_TOOLS:BOOL=OFF

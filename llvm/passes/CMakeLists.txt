@@ -1,3 +1,8 @@
+add_llvm_pass_plugin(CompilerCostModel
+    CompilerCostModel.cpp
+    PARTIAL_SOURCES_INTENDED
+)
+
 add_llvm_pass_plugin(LoopUnrollFeatureExtractor
     LoopUnrollFeatureExtractor.cpp
     PARTIAL_SOURCES_INTENDED
@@ -14,6 +19,10 @@ add_llvm_pass_plugin(LoopFusionFeatureExtractor
     PARTIAL_SOURCES_INTENDED
 )
 
+add_llvm_pass_plugin(LoopTilingFeatureExtractor
+    LoopTilingFeatureExtractor.cpp
+    PARTIAL_SOURCES_INTENDED
+)
 
 add_llvm_pass_plugin(LoopUnrollDatasetGenerator
     DatasetGenerators/LoopUnrollDatasetGenerator.cpp
@@ -22,5 +31,10 @@ add_llvm_pass_plugin(LoopUnrollDatasetGenerator
 
 add_llvm_pass_plugin(LoopVectorizationDatasetGenerator
     DatasetGenerators/LoopVectorizationDatasetGenerator.cpp
+    PARTIAL_SOURCES_INTENDED
+)
+
+add_llvm_pass_plugin(LoopFusionDatasetGenerator
+    DatasetGenerators/LoopFusionDatasetGenerator.cpp
     PARTIAL_SOURCES_INTENDED
 )

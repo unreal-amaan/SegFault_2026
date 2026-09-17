@@ -1,6 +1,12 @@
 [
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/CompilerCostModel.dir/CompilerCostModel.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/CompilerCostModel.cpp",
+  "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/CompilerCostModel.cpp",
+  "output": "llvm/passes/CMakeFiles/CompilerCostModel.dir/CompilerCostModel.cpp.o"
+},
+{
+  "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
   "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/LoopUnrollFeatureExtractor.dir/LoopUnrollFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopUnrollFeatureExtractor.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopUnrollFeatureExtractor.cpp",
   "output": "llvm/passes/CMakeFiles/LoopUnrollFeatureExtractor.dir/LoopUnrollFeatureExtractor.cpp.o"
@@ -19,6 +25,12 @@
 },
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/LoopTilingFeatureExtractor.dir/LoopTilingFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopTilingFeatureExtractor.cpp",
+  "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopTilingFeatureExtractor.cpp",
+  "output": "llvm/passes/CMakeFiles/LoopTilingFeatureExtractor.dir/LoopTilingFeatureExtractor.cpp.o"
+},
+{
+  "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
   "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/LoopUnrollDatasetGenerator.dir/DatasetGenerators/LoopUnrollDatasetGenerator.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/DatasetGenerators/LoopUnrollDatasetGenerator.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/DatasetGenerators/LoopUnrollDatasetGenerator.cpp",
   "output": "llvm/passes/CMakeFiles/LoopUnrollDatasetGenerator.dir/DatasetGenerators/LoopUnrollDatasetGenerator.cpp.o"
@@ -28,5 +40,11 @@
   "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/LoopVectorizationDatasetGenerator.dir/DatasetGenerators/LoopVectorizationDatasetGenerator.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/DatasetGenerators/LoopVectorizationDatasetGenerator.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/DatasetGenerators/LoopVectorizationDatasetGenerator.cpp",
   "output": "llvm/passes/CMakeFiles/LoopVectorizationDatasetGenerator.dir/DatasetGenerators/LoopVectorizationDatasetGenerator.cpp.o"
+},
+{
+  "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/LoopFusionDatasetGenerator.dir/DatasetGenerators/LoopFusionDatasetGenerator.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/DatasetGenerators/LoopFusionDatasetGenerator.cpp",
+  "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/DatasetGenerators/LoopFusionDatasetGenerator.cpp",
+  "output": "llvm/passes/CMakeFiles/LoopFusionDatasetGenerator.dir/DatasetGenerators/LoopFusionDatasetGenerator.cpp.o"
 }
 ]

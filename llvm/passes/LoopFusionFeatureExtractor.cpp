@@ -3,13 +3,15 @@
 #include "llvm/Analysis/ScalarEvolutionExpressions.h"
 
 #include "llvm/IR/CFG.h"
+#include "llvm/IR/Constants.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/Instruction.h"
 #include "llvm/IR/Instructions.h"
+#include "llvm/IR/Metadata.h"
 #include "llvm/IR/PassManager.h"
+#include "llvm/IR/Value.h"
 
 #include "llvm/Analysis/ValueTracking.h"
-#include "llvm/IR/Value.h"
 
 #include "llvm/Passes/PassBuilder.h"
 #include "llvm/Plugins/PassPlugin.h"
@@ -17,10 +19,12 @@
 #include "llvm/Support/raw_ostream.h"
 
 #include <cstdint>
+#include <map>
 #include <set>
+#include <utility>
 #include <vector>
 
-using namespace llvm;
+    using namespace llvm;
 
 struct LoopFeatures {
 
@@ -81,6 +85,10 @@ class LoopFusionFeatureExtractor
     : public PassInfoMixin<LoopFusionFeatureExtractor> {
 
 private:
+  // Maps the actual LLVM Loop object to the persistent
+  // compiler_cost_model.loop_id assigned to it.
+  std::map<Loop *, unsigned> LoopIDs;
+
   enum class MemoryAccessPattern { ForwardContiguous, Unknown };
 
   MemoryAccessPattern classifyMemoryAccess(Instruction *Inst,
@@ -90,10 +98,15 @@ private:
     Value *Ptr = nullptr;
 
     if (auto *Load = dyn_cast<LoadInst>(Inst)) {
+
       Ptr = Load->getPointerOperand();
+
     } else if (auto *Store = dyn_cast<StoreInst>(Inst)) {
+
       Ptr = Store->getPointerOperand();
+
     } else {
+
       return MemoryAccessPattern::Unknown;
     }
 
@@ -102,6 +115,7 @@ private:
     auto *AddRec = dyn_cast<SCEVAddRecExpr>(PtrSCEV);
 
     if (!AddRec || !AddRec->isAffine()) {
+
       return MemoryAccessPattern::Unknown;
     }
 
@@ -110,6 +124,7 @@ private:
     auto *ConstantStep = dyn_cast<SCEVConstant>(Step);
 
     if (!ConstantStep) {
+
       return MemoryAccessPattern::Unknown;
     }
 
@@ -118,12 +133,16 @@ private:
     Type *AccessType = nullptr;
 
     if (auto *Load = dyn_cast<LoadInst>(Inst)) {
+
       AccessType = Load->getType();
+
     } else {
+
       AccessType = cast<StoreInst>(Inst)->getValueOperand()->getType();
     }
 
     if (!AccessType->isSized()) {
+
       return MemoryAccessPattern::Unknown;
     }
 
@@ -171,10 +190,12 @@ private:
         }
 
         if (isa<BranchInst>(&Inst)) {
+
           ++Features.numBranches;
         }
 
         if (isa<CallBase>(&Inst)) {
+
           ++Features.numCalls;
         }
 
@@ -225,10 +246,34 @@ private:
 
     for (BasicBlock *ExitBB : ExitingBlocks) {
 
-      for (BasicBlock *Successor : successors(ExitBB)) {
+      SmallVector<BasicBlock *, 4> Worklist;
 
-        if (Successor == L2Header) {
-          return true;
+      SmallPtrSet<BasicBlock *, 8> Visited;
+
+      Worklist.push_back(ExitBB);
+
+      while (!Worklist.empty()) {
+
+        BasicBlock *BB = Worklist.pop_back_val();
+
+        if (!Visited.insert(BB).second)
+          continue;
+
+        for (BasicBlock *Successor : successors(BB)) {
+
+          if (Successor == L2Header)
+            return true;
+
+          // Do not walk into another loop.
+          if (Successor->getParent() != L2->getHeader()->getParent()) {
+
+            continue;
+          }
+
+          if (L2->contains(Successor))
+            continue;
+
+          Worklist.push_back(Successor);
         }
       }
     }
@@ -262,6 +307,7 @@ private:
           Ptr = Store->getPointerOperand();
 
         } else {
+
           continue;
         }
 
@@ -293,6 +339,7 @@ private:
           Ptr = Store->getPointerOperand();
 
         } else {
+
           continue;
         }
 
@@ -336,6 +383,7 @@ private:
         Value *Object = getUnderlyingObject(Load->getPointerOperand());
 
         if (StoredObjects.count(Object)) {
+
           ++Count;
         }
       }
@@ -379,6 +427,7 @@ private:
     for (Value *Object : Objects1) {
 
       if (Objects2.count(Object)) {
+
         ++Features.sharedMemoryObjects;
       }
     }
@@ -467,14 +516,54 @@ private:
     errs() << "========================================\n";
   }
 
+  void assignLoopID(Loop *L, unsigned ID) {
+
+    LLVMContext &Ctx = L->getHeader()->getContext();
+
+    MDNode *OldLoopID = L->getLoopID();
+
+    SmallVector<Metadata *, 8> MDs;
+
+    // First operand must refer to
+    // the loop metadata node itself.
+    MDs.push_back(nullptr);
+
+    // Preserve existing loop metadata.
+    if (OldLoopID) {
+
+      for (unsigned I = 1; I < OldLoopID->getNumOperands(); ++I) {
+
+        MDs.push_back(OldLoopID->getOperand(I));
+      }
+    }
+
+    Metadata *LoopIDMD[] = {
+
+        MDString::get(Ctx, "compiler_cost_model.loop_id"),
+
+        ConstantAsMetadata::get(ConstantInt::get(Type::getInt32Ty(Ctx), ID))};
+
+    MDs.push_back(MDNode::get(Ctx, LoopIDMD));
+
+    MDNode *NewLoopID = MDNode::getDistinct(Ctx, MDs);
+
+    NewLoopID->replaceOperandWith(0, NewLoopID);
+
+    L->setLoopID(NewLoopID);
+  }
+
 public:
   PreservedAnalyses run(Function &F, FunctionAnalysisManager &AM) {
 
     errs() << "\n--- LoopFusionFeatureExtractor Invoked ---\n";
 
     if (F.isDeclaration()) {
+
       return PreservedAnalyses::all();
     }
+
+    // Clear the mapping for this function.
+    LoopIDs.clear();
 
     LoopInfo &LI = AM.getResult<LoopAnalysis>(F);
 
@@ -484,35 +573,81 @@ public:
 
     SmallVector<Loop *, 8> Loops;
 
+    unsigned NextLoopID = 0;
+
+    // We currently consider only top-level loops.
     for (Loop *L : LI) {
 
       if (L->getParentLoop() == nullptr) {
+
         Loops.push_back(L);
       }
     }
 
-    unsigned LoopID = 0;
+    // Assign the persistent loop ID once.
+    //
+    // The same ID is:
+    //   1. attached to LLVM loop metadata
+    //   2. stored in LoopIDs
+    //   3. used in every fusion candidate
+    for (Loop *L : Loops) {
 
-    for (Loop *L1 : Loops) {
+      unsigned ID = NextLoopID++;
 
-      for (Loop *L2 : Loops) {
+      assignLoopID(L, ID);
 
-        if (L1 == L2)
-          continue;
+      LoopIDs[L] = ID;
+
+      errs() << "Assigned loop ID " << ID
+             << " to loop header: " << L->getHeader()->getName() << "\n";
+    }
+
+    // Generate features for every adjacent pair.
+    //
+    // IMPORTANT:
+    // We retrieve the IDs from LoopIDs rather than
+    // generating new IDs here.
+    for (size_t I = 0; I < Loops.size(); ++I) {
+
+      for (size_t J = I + 1; J < Loops.size(); ++J) {
+
+        Loop *L1 = Loops[I];
+
+        Loop *L2 = Loops[J];
+
+        // Normalize the pair so L1 comes before L2.
+        if (isAdjacent(L2, L1)) {
+
+          std::swap(L1, L2);
+        }
 
         if (!isAdjacent(L1, L2))
           continue;
 
-        unsigned Loop1ID = LoopID++;
-        unsigned Loop2ID = LoopID++;
+        auto ID1It = LoopIDs.find(L1);
+
+        auto ID2It = LoopIDs.find(L2);
+
+        if (ID1It == LoopIDs.end() || ID2It == LoopIDs.end()) {
+
+          errs() << "ERROR: missing loop ID "
+                    "for fusion candidate\n";
+
+          continue;
+        }
+
+        unsigned Loop1ID = ID1It->second;
+
+        unsigned Loop2ID = ID2It->second;
 
         LoopFusionFeatures Features =
             analyzeLoopPair(L1, L2, SE, F.getDataLayout(), Loop1ID, Loop2ID);
+
         printInfo(Features);
       }
     }
 
-    return PreservedAnalyses::all();
+    return PreservedAnalyses::none();
   }
 };
 
