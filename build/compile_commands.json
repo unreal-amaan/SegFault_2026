@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
-  "command": "/usr/bin/c++ -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -o CMakeFiles/CompilerCostModel.dir/CompilerCostModel.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/CompilerCostModel.cpp",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/CompilerCostModel.dir/CompilerCostModel.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/CompilerCostModel.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/CompilerCostModel.cpp",
   "output": "llvm/passes/CMakeFiles/CompilerCostModel.dir/CompilerCostModel.cpp.o"
 },
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
-  "command": "/usr/bin/c++ -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -o CMakeFiles/CompilerCostModel.dir/LoopUnrollFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopUnrollFeatureExtractor.cpp",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/CompilerCostModel.dir/LoopUnrollFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopUnrollFeatureExtractor.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopUnrollFeatureExtractor.cpp",
   "output": "llvm/passes/CMakeFiles/CompilerCostModel.dir/LoopUnrollFeatureExtractor.cpp.o"
 },
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
-  "command": "/usr/bin/c++ -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -o CMakeFiles/CompilerCostModel.dir/LoopVectorizationFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopVectorizationFeatureExtractor.cpp",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/CompilerCostModel.dir/LoopVectorizationFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopVectorizationFeatureExtractor.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopVectorizationFeatureExtractor.cpp",
   "output": "llvm/passes/CMakeFiles/CompilerCostModel.dir/LoopVectorizationFeatureExtractor.cpp.o"
 },
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
-  "command": "/usr/bin/c++ -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -o CMakeFiles/CompilerCostModel.dir/LoopFusionFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopFusionFeatureExtractor.cpp",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/CompilerCostModel.dir/LoopFusionFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopFusionFeatureExtractor.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopFusionFeatureExtractor.cpp",
   "output": "llvm/passes/CMakeFiles/CompilerCostModel.dir/LoopFusionFeatureExtractor.cpp.o"
 },
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
-  "command": "/usr/bin/c++ -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -o CMakeFiles/CompilerCostModel.dir/LoopTilingFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopTilingFeatureExtractor.cpp",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/CompilerCostModel.dir/LoopTilingFeatureExtractor.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopTilingFeatureExtractor.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LoopTilingFeatureExtractor.cpp",
   "output": "llvm/passes/CMakeFiles/CompilerCostModel.dir/LoopTilingFeatureExtractor.cpp.o"
 },
 {
   "directory": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes",
-  "command": "/usr/bin/c++ -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS  -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -o CMakeFiles/LLVMHeuristicCostModel.dir/LLVMHeuristicCostModel.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LLVMHeuristicCostModel.cpp",
+  "command": "/usr/bin/c++ -D_DEBUG -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_USE_CXX11_ABI=1 -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I/home/syed/Amaan/amaan_codes/llvm/llvm-project/llvm/include -I/home/syed/Amaan/amaan_codes/llvm/build/include -std=gnu++20 -fPIC -fno-exceptions -funwind-tables -fno-rtti -o CMakeFiles/LLVMHeuristicCostModel.dir/LLVMHeuristicCostModel.cpp.o -c /home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LLVMHeuristicCostModel.cpp",
   "file": "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/llvm/passes/LLVMHeuristicCostModel.cpp",
   "output": "llvm/passes/CMakeFiles/LLVMHeuristicCostModel.dir/LLVMHeuristicCostModel.cpp.o"
 }

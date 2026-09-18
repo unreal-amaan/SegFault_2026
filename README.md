@@ -394,55 +394,6 @@ Instead, it answers:
 
 ---
 
-# 9. Dataset
-
-Training data is generated from benchmark programs containing annotated optimization candidates.
-
-The dataset pipeline follows:
-
-```text
-Benchmark Program
-       │
-       ▼
-Optimization Annotation
-       │
-       ▼
-LLVM Feature Extraction
-       │
-       ▼
-Optimization Configurations
-       │
-       ▼
-Performance / Synthetic Label
-       │
-       ▼
-Processed Dataset
-       │
-       ▼
-Model Training
-```
-
-The datasets are organized by optimization.
-
-Example:
-
-```text
-data/
-├── raw/
-│   ├── loop_unroll/
-│   └── loop_vectorization/
-│
-└── processed/
-    ├── loop_unroll/
-    ├── loop_vectorization/
-    ├── loop_tiling/
-    └── loop_fusion/
-```
-
-The raw datasets preserve extracted compiler information, while processed datasets contain the features in a format suitable for machine learning.
-
----
-
 # 10. Labels
 
 The classifier requires a profitability label.

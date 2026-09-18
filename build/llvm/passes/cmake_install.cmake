@@ -43,41 +43,41 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "CompilerCostModel" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so"
-         RPATH "\$ORIGIN/../lib64")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so"
+         RPATH "\$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/CompilerCostModel.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/CompilerCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so"
-         OLD_RPATH "\$ORIGIN/../lib64:/usr/lib64:"
-         NEW_RPATH "\$ORIGIN/../lib64")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so"
+         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
+         NEW_RPATH "\$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "LLVMHeuristicCostModel" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so"
-         RPATH "\$ORIGIN/../lib64")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so"
+         RPATH "\$ORIGIN/../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LLVMHeuristicCostModel.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LLVMHeuristicCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so"
-         OLD_RPATH "\$ORIGIN/../lib64:/usr/lib64:"
-         NEW_RPATH "\$ORIGIN/../lib64")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so"
+         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
+         NEW_RPATH "\$ORIGIN/../lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LLVMHeuristicCostModel.so")
     endif()
   endif()
 endif()
