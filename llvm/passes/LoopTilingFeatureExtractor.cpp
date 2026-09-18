@@ -1,459 +1,299 @@
-#include "llvm/Analysis/LoopInfo.h"
-#include "llvm/Analysis/ScalarEvolution.h"
+#include "LoopTilingFeatureExtractor.h"
+
 #include "llvm/Analysis/ScalarEvolutionExpressions.h"
 
+#include "llvm/IR/DataLayout.h"
 #include "llvm/IR/Function.h"
 #include "llvm/IR/Instruction.h"
 #include "llvm/IR/Instructions.h"
-#include "llvm/IR/PassManager.h"
 
-#include "llvm/Passes/PassBuilder.h"
-#include "llvm/Plugins/PassPlugin.h"
 
-#include "llvm/Support/raw_ostream.h"
+using namespace llvm;
 
-    using namespace llvm;
+namespace {
 
-unsigned LoopID = 0;
-
-struct LoopTilingFeatures {
-
-  unsigned loopID;
-
-  unsigned loopDepth;
-  bool isInnermost;
-  unsigned numSubLoops;
-
-  bool tripCountKnown;
-  uint64_t tripCount;
-
-  bool maxTripCountKnown;
-  uint64_t maxTripCount;
-
-  unsigned numInstructions;
-  unsigned numLoads;
-  unsigned numStores;
-
-  unsigned numIntegerOps;
-  unsigned numFloatOps;
-
-  unsigned numForwardContiguousLoads;
-  unsigned numStridedLoads;
-
-  unsigned numForwardContiguousStores;
-  unsigned numStridedStores;
+enum class MemoryAccessPattern {
+  ForwardContiguous,
+  ReverseContiguous,
+  Strided,
+  Unknown
 };
 
-class LoopTilingFeatureExtractor
-    : public PassInfoMixin<LoopTilingFeatureExtractor> {
+const SCEVAddRecExpr *findAddRecForLoop(const SCEV *S, Loop *L) {
 
-private:
-  enum class MemoryAccessPattern {
-    ForwardContiguous,
-    ReverseContiguous,
-    Strided,
-    Unknown
-  };
+  if (auto *AddRec = dyn_cast<SCEVAddRecExpr>(S)) {
 
-  /*
-   * Recursively search a SCEV expression for an AddRec belonging
-   * to the loop currently being analyzed.
-   *
-   * For example, a pointer SCEV may look like:
-   *
-   *   outer_expression + AddRec(inner_loop)
-   *
-   * rather than being an AddRec itself.
-   */
-  const SCEVAddRecExpr *findAddRecForLoop(const SCEV *S, Loop *L) {
-
-    if (auto *AddRec = dyn_cast<SCEVAddRecExpr>(S)) {
-
-      if (AddRec->getLoop() == L) {
-        return AddRec;
-      }
-    }
-
-    for (const SCEV *Operand : S->operands()) {
-
-      if (const SCEVAddRecExpr *AddRec =
-              findAddRecForLoop(Operand, L)) {
-
-        return AddRec;
-      }
-    }
-
-    return nullptr;
+    if (AddRec->getLoop() == L)
+      return AddRec;
   }
 
-  MemoryAccessPattern classifyMemoryAccess(Instruction *Inst, Loop *L,
-                                           ScalarEvolution &SE,
-                                           const DataLayout &DL) {
+  for (const SCEV *Operand : S->operands()) {
 
-    Value *Ptr = nullptr;
+    if (const SCEVAddRecExpr *AddRec = findAddRecForLoop(Operand, L)) {
 
-    if (auto *Load = dyn_cast<LoadInst>(Inst)) {
-
-      Ptr = Load->getPointerOperand();
-
-    } else if (auto *Store = dyn_cast<StoreInst>(Inst)) {
-
-      Ptr = Store->getPointerOperand();
-
-    } else {
-
-      return MemoryAccessPattern::Unknown;
+      return AddRec;
     }
-
-    /*
-     * Obtain the scalar-evolution representation of the address.
-     */
-    const SCEV *PtrSCEV = SE.getSCEV(Ptr);
-
-    /*
-     * The AddRec does not necessarily have to be the top-level
-     * SCEV expression. Search recursively for the AddRec associated
-     * with the current loop.
-     */
-    const SCEVAddRecExpr *AddRec = findAddRecForLoop(PtrSCEV, L);
-
-    if (!AddRec || !AddRec->isAffine()) {
-
-      return MemoryAccessPattern::Unknown;
-    }
-
-    /*
-     * Extract the loop-dependent step.
-     */
-    const SCEV *Step = AddRec->getStepRecurrence(SE);
-
-    auto *ConstantStep = dyn_cast<SCEVConstant>(Step);
-
-    if (!ConstantStep) {
-
-      return MemoryAccessPattern::Unknown;
-    }
-
-    int64_t StrideBytes = ConstantStep->getAPInt().getSExtValue();
-
-    /*
-     * Determine the size of the accessed element.
-     */
-    Type *AccessType = nullptr;
-
-    if (auto *Load = dyn_cast<LoadInst>(Inst)) {
-
-      AccessType = Load->getType();
-
-    } else {
-
-      auto *Store = cast<StoreInst>(Inst);
-
-      AccessType = Store->getValueOperand()->getType();
-    }
-
-    if (!AccessType || !AccessType->isSized()) {
-
-      return MemoryAccessPattern::Unknown;
-    }
-
-    uint64_t ElementSize = DL.getTypeAllocSize(AccessType);
-
-    /*
-     * Sequential access:
-     *
-     *   A[i]     -> +element_size
-     *   A[i - 1] -> -element_size
-     */
-    if (StrideBytes == static_cast<int64_t>(ElementSize)) {
-
-      return MemoryAccessPattern::ForwardContiguous;
-    }
-
-    if (StrideBytes == -static_cast<int64_t>(ElementSize)) {
-
-      return MemoryAccessPattern::ReverseContiguous;
-    }
-
-    /*
-     * Any other constant stride is considered strided.
-     */
-    return MemoryAccessPattern::Strided;
   }
 
-  void attachLoopID(Loop *L, unsigned LoopNumber) {
+  return nullptr;
+}
 
-    LLVMContext &Ctx = L->getHeader()->getContext();
+MemoryAccessPattern classifyMemoryAccess(Instruction *Inst, Loop *L,
+                                         ScalarEvolution &SE,
+                                         const DataLayout &DL) {
 
-    SmallVector<Metadata *, 8> Operands;
+  Value *Ptr = nullptr;
 
-    /*
-     * Loop ID metadata is self-referential.
-     */
-    Operands.push_back(nullptr);
+  if (auto *Load = dyn_cast<LoadInst>(Inst)) {
 
-    /*
-     * Preserve existing loop metadata.
-     */
-    if (MDNode *ExistingLoopID = L->getLoopID()) {
+    Ptr = Load->getPointerOperand();
 
-      for (unsigned I = 1; I < ExistingLoopID->getNumOperands(); ++I) {
+  } else if (auto *Store = dyn_cast<StoreInst>(Inst)) {
 
-        Operands.push_back(ExistingLoopID->getOperand(I));
-      }
-    }
+    Ptr = Store->getPointerOperand();
 
-    Metadata *LoopIDOperands[] = {
+  } else {
 
-        MDString::get(Ctx, "compiler_cost_model.loop_id"),
-
-        ConstantAsMetadata::get(
-            ConstantInt::get(Type::getInt32Ty(Ctx), LoopNumber))};
-
-    Operands.push_back(MDNode::get(Ctx, LoopIDOperands));
-
-    MDNode *NewLoopID = MDNode::getDistinct(Ctx, Operands);
-
-    NewLoopID->replaceOperandWith(0, NewLoopID);
-
-    L->setLoopID(NewLoopID);
+    return MemoryAccessPattern::Unknown;
   }
 
-  void extractLoopFeatures(Loop *L, ScalarEvolution &SE, const DataLayout &DL) {
+  const SCEV *PtrSCEV = SE.getSCEV(Ptr);
 
-    LoopTilingFeatures Features{};
+  const SCEVAddRecExpr *AddRec = findAddRecForLoop(PtrSCEV, L);
 
-    Features.loopID = LoopID++;
+  if (!AddRec || !AddRec->isAffine())
+    return MemoryAccessPattern::Unknown;
 
-    attachLoopID(L, Features.loopID);
+  const SCEV *Step = AddRec->getStepRecurrence(SE);
 
-    /*
-     * Basic loop structure.
-     */
-    Features.loopDepth = L->getLoopDepth();
+  auto *ConstantStep = dyn_cast<SCEVConstant>(Step);
 
-    Features.isInnermost = L->isInnermost();
+  if (!ConstantStep)
+    return MemoryAccessPattern::Unknown;
 
-    Features.numSubLoops = L->getSubLoops().size();
+  int64_t StrideBytes = ConstantStep->getAPInt().getSExtValue();
 
-    /*
-     * Trip count.
-     */
-    uint64_t TripCount = SE.getSmallConstantTripCount(L);
+  Type *AccessType = nullptr;
 
-    Features.tripCountKnown = TripCount != 0;
+  if (auto *Load = dyn_cast<LoadInst>(Inst)) {
 
-    Features.tripCount = TripCount;
+    AccessType = Load->getType();
 
-    uint64_t MaxTripCount = SE.getSmallConstantMaxTripCount(L);
+  } else {
 
-    Features.maxTripCountKnown = MaxTripCount != 0;
+    auto *Store = cast<StoreInst>(Inst);
 
-    Features.maxTripCount = MaxTripCount;
+    AccessType = Store->getValueOperand()->getType();
+  }
 
-    /*
-     * Instruction and memory-operation counts.
-     */
-    unsigned NumInstructions = 0;
-    unsigned NumLoads = 0;
-    unsigned NumStores = 0;
+  if (!AccessType || !AccessType->isSized())
+    return MemoryAccessPattern::Unknown;
 
-    unsigned NumIntegerOps = 0;
-    unsigned NumFloatOps = 0;
+  uint64_t ElementSize = DL.getTypeAllocSize(AccessType);
 
-    unsigned NumForwardContiguousLoads = 0;
-    unsigned NumStridedLoads = 0;
+  if (StrideBytes == static_cast<int64_t>(ElementSize)) {
 
-    unsigned NumForwardContiguousStores = 0;
-    unsigned NumStridedStores = 0;
+    return MemoryAccessPattern::ForwardContiguous;
+  }
 
-    /*
-     * Analyze all instructions belonging to this loop.
-     */
-    for (BasicBlock *BB : L->blocks()) {
+  if (StrideBytes == -static_cast<int64_t>(ElementSize)) {
 
-      for (Instruction &Inst : *BB) {
+    return MemoryAccessPattern::ReverseContiguous;
+  }
 
-        ++NumInstructions;
+  return MemoryAccessPattern::Strided;
+}
 
-        /*
-         * Loads.
-         */
-        if (auto *Load = dyn_cast<LoadInst>(&Inst)) {
+} // namespace
 
-          ++NumLoads;
+LoopTilingFeatures llvm::extractLoopTilingFeatures(Loop *L, ScalarEvolution &SE,
+                                                   const DataLayout &DL) {
 
-          switch (classifyMemoryAccess(Load, L, SE, DL)) {
+  LoopTilingFeatures Features{};
 
-          case MemoryAccessPattern::ForwardContiguous:
+  if (!L)
+    return Features;
 
-            ++NumForwardContiguousLoads;
-            break;
+  // ------------------------------------------------------------
+  // Loop structure
+  // ------------------------------------------------------------
 
-          case MemoryAccessPattern::Strided:
+  Features.loopDepth = L->getLoopDepth();
 
-            ++NumStridedLoads;
-            break;
+  Features.isInnermost = L->isInnermost();
 
-          default:
+  Features.hasParentLoop = L->getParentLoop() != nullptr;
 
-            break;
-          }
-        }
+  Features.numSubLoops = L->getSubLoops().size();
 
-        /*
-         * Stores.
-         */
-        if (auto *Store = dyn_cast<StoreInst>(&Inst)) {
+  Features.numBasicBlocks = L->getNumBlocks();
 
-          ++NumStores;
+  SmallVector<BasicBlock *, 4> ExitingBlocks;
 
-          switch (classifyMemoryAccess(Store, L, SE, DL)) {
+  L->getExitingBlocks(ExitingBlocks);
 
-          case MemoryAccessPattern::ForwardContiguous:
+  Features.numExitingBlocks = ExitingBlocks.size();
 
-            ++NumForwardContiguousStores;
-            break;
+  // ------------------------------------------------------------
+  // Loop body
+  // ------------------------------------------------------------
 
-          case MemoryAccessPattern::Strided:
+  for (BasicBlock *BB : L->blocks()) {
 
-            ++NumStridedStores;
-            break;
+    for (Instruction &Inst : *BB) {
 
-          default:
+      ++Features.numInstructions;
 
-            break;
-          }
-        }
+      if (isa<PHINode>(&Inst))
+        ++Features.numPhiNodes;
 
-        /*
-         * Integer arithmetic.
-         */
-        switch (Inst.getOpcode()) {
+      if (Inst.isTerminator())
+        ++Features.numTerminatorInstructions;
 
-        case Instruction::Add:
-        case Instruction::Sub:
-        case Instruction::Mul:
-        case Instruction::SDiv:
-        case Instruction::UDiv:
-        case Instruction::SRem:
-        case Instruction::URem:
+      // ----------------------------------------------------------
+      // Loads
+      // ----------------------------------------------------------
 
-          ++NumIntegerOps;
+      if (auto *Load = dyn_cast<LoadInst>(&Inst)) {
+
+        ++Features.numLoads;
+
+        switch (classifyMemoryAccess(Load, L, SE, DL)) {
+
+        case MemoryAccessPattern::ForwardContiguous:
+          ++Features.numForwardContiguousLoads;
           break;
 
-        /*
-         * Floating-point arithmetic.
-         */
-        case Instruction::FAdd:
-        case Instruction::FSub:
-        case Instruction::FMul:
-        case Instruction::FDiv:
-        case Instruction::FRem:
-
-          ++NumFloatOps;
+        case MemoryAccessPattern::ReverseContiguous:
+          ++Features.numReverseContiguousLoads;
           break;
 
-        default:
+        case MemoryAccessPattern::Strided:
+          ++Features.numStridedLoads;
+          break;
 
+        case MemoryAccessPattern::Unknown:
+          ++Features.numUnknownLoads;
           break;
         }
       }
-    }
 
-    /*
-     * Store extracted features.
-     */
-    Features.numInstructions = NumInstructions;
+      // ----------------------------------------------------------
+      // Stores
+      // ----------------------------------------------------------
 
-    Features.numLoads = NumLoads;
+      if (auto *Store = dyn_cast<StoreInst>(&Inst)) {
 
-    Features.numStores = NumStores;
+        ++Features.numStores;
 
-    Features.numIntegerOps = NumIntegerOps;
+        switch (classifyMemoryAccess(Store, L, SE, DL)) {
 
-    Features.numFloatOps = NumFloatOps;
+        case MemoryAccessPattern::ForwardContiguous:
+          ++Features.numForwardContiguousStores;
+          break;
 
-    Features.numForwardContiguousLoads = NumForwardContiguousLoads;
+        case MemoryAccessPattern::ReverseContiguous:
+          ++Features.numReverseContiguousStores;
+          break;
 
-    Features.numStridedLoads = NumStridedLoads;
+        case MemoryAccessPattern::Strided:
+          ++Features.numStridedStores;
+          break;
 
-    Features.numForwardContiguousStores = NumForwardContiguousStores;
+        case MemoryAccessPattern::Unknown:
+          ++Features.numUnknownStores;
+          break;
+        }
+      }
 
-    Features.numStridedStores = NumStridedStores;
+      // ----------------------------------------------------------
+      // Branches
+      // ----------------------------------------------------------
 
-    printInfo(Features);
+      if (auto *BI = dyn_cast<BranchInst>(&Inst)) {
 
-    /*
-     * Recursively process nested loops.
-     */
-    for (Loop *SubLoop : L->getSubLoops()) {
+        ++Features.numBranches;
 
-      extractLoopFeatures(SubLoop, SE, DL);
+        if (BI->isConditional())
+          ++Features.numConditionalBranches;
+      }
+
+      // ----------------------------------------------------------
+      // Calls
+      // ----------------------------------------------------------
+
+      if (isa<CallBase>(&Inst))
+        ++Features.numCalls;
+
+      // ----------------------------------------------------------
+      // Arithmetic
+      // ----------------------------------------------------------
+
+      switch (Inst.getOpcode()) {
+
+      case Instruction::Add:
+      case Instruction::Sub:
+      case Instruction::Mul:
+      case Instruction::SDiv:
+      case Instruction::UDiv:
+      case Instruction::SRem:
+      case Instruction::URem:
+
+        ++Features.numIntegerOps;
+        break;
+
+      case Instruction::FAdd:
+      case Instruction::FSub:
+      case Instruction::FMul:
+      case Instruction::FDiv:
+      case Instruction::FRem:
+
+        ++Features.numFloatOps;
+        break;
+
+      default:
+        break;
+      }
     }
   }
 
-  void printInfo(const LoopTilingFeatures &Features) {
+  // ------------------------------------------------------------
+  // Trip count
+  // ------------------------------------------------------------
 
-    errs() << Features.loopID << "," << Features.loopDepth << ","
-           << Features.isInnermost << "," << Features.numSubLoops << ","
-           << Features.tripCountKnown << "," << Features.tripCount << ","
-           << Features.maxTripCountKnown << "," << Features.maxTripCount << ","
-           << Features.numInstructions << "," << Features.numLoads << ","
-           << Features.numStores << "," << Features.numIntegerOps << ","
-           << Features.numFloatOps << "," << Features.numForwardContiguousLoads
-           << "," << Features.numStridedLoads << ","
-           << Features.numForwardContiguousStores << ","
-           << Features.numStridedStores << "\n";
-  }
+  uint64_t TripCount = SE.getSmallConstantTripCount(L);
 
-public:
-  PreservedAnalyses run(Function &F, FunctionAnalysisManager &AM) {
+  Features.tripCountKnown = TripCount != 0;
 
-    errs() << "\n--- LoopTilingFeatureExtractor Invoked ---\n";
+  Features.tripCount = TripCount;
 
-    if (F.isDeclaration()) {
+  uint64_t MaxTripCount = SE.getSmallConstantMaxTripCount(L);
 
-      return PreservedAnalyses::all();
-    }
+  Features.maxTripCountKnown = MaxTripCount != 0;
 
-    LoopInfo &LI = AM.getResult<LoopAnalysis>(F);
+  Features.maxTripCount = MaxTripCount;
 
-    ScalarEvolution &SE = AM.getResult<ScalarEvolutionAnalysis>(F);
+  // ------------------------------------------------------------
+  // Derived features
+  // ------------------------------------------------------------
 
-    const DataLayout &DL = F.getParent()->getDataLayout();
+  unsigned MemoryOps = Features.numLoads + Features.numStores;
 
-    /*
-     * LoopInfo contains top-level loops.
-     * extractLoopFeatures() recursively handles
-     * nested loops.
-     */
-    for (Loop *L : LI) {
+  unsigned ArithmeticOps = Features.numIntegerOps + Features.numFloatOps;
 
-      extractLoopFeatures(L, SE, DL);
-    }
+  Features.memoryOpRatio =
+      Features.numInstructions > 0
+          ? static_cast<double>(MemoryOps) / Features.numInstructions
+          : 0.0;
 
-    return PreservedAnalyses::all();
-  }
-};
+  Features.controlOverheadRatio =
+      Features.numInstructions > 0
+          ? static_cast<double>(Features.numBranches) / Features.numInstructions
+          : 0.0;
 
-extern "C" LLVM_ATTRIBUTE_WEAK PassPluginLibraryInfo llvmGetPassPluginInfo() {
+  Features.arithmeticIntensity =
+      MemoryOps > 0 ? static_cast<double>(ArithmeticOps) / MemoryOps
+                    : static_cast<double>(ArithmeticOps);
 
-  return {LLVM_PLUGIN_API_VERSION, "LoopTilingFeatureExtractor",
-          LLVM_VERSION_STRING,
-
-          [](PassBuilder &PB) {
-            PB.registerPipelineParsingCallback(
-                [](StringRef Name, FunctionPassManager &FPM,
-                   ArrayRef<PassBuilder::PipelineElement>) {
-                  if (Name == "loop-tiling-features") {
-
-                    FPM.addPass(LoopTilingFeatureExtractor());
-
-                    return true;
-                  }
-
-                  return false;
-                });
-          }};
+  return Features;
 }

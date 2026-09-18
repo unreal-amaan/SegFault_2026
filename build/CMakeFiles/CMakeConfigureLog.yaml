@@ -3571,3 +3571,344 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:10 (find_package)"
+    name: "LLVM"
+    configs:
+      -
+        filename: "LLVM.cps"
+        kind: "cps"
+      -
+        filename: "llvm.cps"
+        kind: "cps"
+      -
+        filename: "LLVMConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "llvm-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "LLVM"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/syed/Amaan/amaan_codes/llvm/build/lib/cmake/llvclls/LLVM.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/llvm/build/lib/cmake/llvclls/llvm.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/llvm/build/lib/cmake/llvclls/LLVMConfig.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/llvm/build/lib/cmake/llvclls/llvm-config.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/CMakeFiles/pkgRedirects/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.local/share/pnpm/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/syed/.nvm/versions/node/v24.19.0/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/LLVMConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/llvm-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib64/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib64/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/LLVM.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/llvm.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib64/cmake/llvm/LLVMConfig.cmake"
+      mode: "config"
+      version: "22.1.8"
+    search_context:
+      ENV{PATH}:
+        - "/home/syed/.vscode/extensions/vadimcn.vscode-lldb-1.12.3/bin"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/syed/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/syed/.local/share/pnpm/bin"
+        - "/home/syed/.nvm/versions/node/v24.19.0/bin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...

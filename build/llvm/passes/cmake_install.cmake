@@ -43,161 +43,41 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "CompilerCostModel" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so"
-         RPATH "\$ORIGIN/../lib")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so"
+         RPATH "\$ORIGIN/../lib64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/CompilerCostModel.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/CompilerCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so"
+         OLD_RPATH "\$ORIGIN/../lib64:/usr/lib64:"
+         NEW_RPATH "\$ORIGIN/../lib64")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/CompilerCostModel.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/CompilerCostModel.so")
     endif()
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopUnrollFeatureExtractor" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "LLVMHeuristicCostModel" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so"
-         RPATH "\$ORIGIN/../lib")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so"
+         RPATH "\$ORIGIN/../lib64")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopUnrollFeatureExtractor.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LLVMHeuristicCostModel.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so"
+         OLD_RPATH "\$ORIGIN/../lib64:/usr/lib64:"
+         NEW_RPATH "\$ORIGIN/../lib64")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollFeatureExtractor.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopVectorizationFeatureExtractor" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so"
-         RPATH "\$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopVectorizationFeatureExtractor.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationFeatureExtractor.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopFusionFeatureExtractor" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so"
-         RPATH "\$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopFusionFeatureExtractor.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionFeatureExtractor.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopTilingFeatureExtractor" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so"
-         RPATH "\$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopTilingFeatureExtractor.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopTilingFeatureExtractor.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopUnrollDatasetGenerator" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so"
-         RPATH "\$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopUnrollDatasetGenerator.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopUnrollDatasetGenerator.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopVectorizationDatasetGenerator" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so"
-         RPATH "\$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopVectorizationDatasetGenerator.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopVectorizationDatasetGenerator.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "LoopFusionDatasetGenerator" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so"
-         RPATH "\$ORIGIN/../lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE MODULE FILES "/home/syed/Amaan/amaan_codes/compilers/compiler-cost-model/build/llvm/passes/LoopFusionDatasetGenerator.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so"
-         OLD_RPATH "\$ORIGIN/../lib:/home/syed/Amaan/amaan_codes/llvm/build/./lib:"
-         NEW_RPATH "\$ORIGIN/../lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/LoopFusionDatasetGenerator.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/LLVMHeuristicCostModel.so")
     endif()
   endif()
 endif()
